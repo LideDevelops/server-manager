@@ -10,20 +10,21 @@ const CollapseExpandButton: React.FC<CollapseExpandButtonProps> = ({ expanded, o
   <button
     className={styles.collapseExpandButton}
     onClick={onClick}
-    aria-label={expanded ? 'Collapse' : 'Expand'}
     type="button"
+    style={{ background: 'transparent', display: 'inline-flex', alignItems: 'center', border: 'none', padding: 0 }}
   >
-    <span className="mr-1">{expanded ? 'Collapse' : 'Expand'}</span>
-    <svg
-      className={`w-4 h-4 transition-transform ${expanded ? 'rotate-90' : ''}`}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
+    <span
+      style={{
+        display: 'inline-block',
+        fontSize: 18,
+        color: '#333',
+        transform: expanded ? 'rotate(90deg)' : 'none',
+        transition: 'transform 0.2s',
+      }}
       aria-hidden="true"
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
+      &bull;
+    </span>
   </button>
 );
 
