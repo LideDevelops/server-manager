@@ -1,0 +1,44 @@
+.container {
+  font-family: monospace;
+  font-size: 14px;
+  background: var(--jv-bg);
+  color: var(--jv-fg);
+  padding: 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.node {
+  margin-left: 16px;
+}
+
+.key {
+  font-weight: bold;
+  color: var(--jv-key);
+}
+
+.value {
+  color: var(--jv-value);
+}
+
+.toggle {
+  cursor: pointer;
+  color: var(--jv-toggle);
+  user-select: none;
+}
+
+.light {
+  --jv-bg: #f5f5f5;
+  --jv-fg: #222;
+  --jv-key: #0050b3;
+  --jv-value: #0070f3;
+  --jv-toggle: #666;
+}
+
+.dark {
+  --jv-bg: #23272e;
+  --jv-fg: #f5f5f5;
+  --jv-key: #7abaff;
+  --jv-value: #4fc3f7;
+  --jv-toggle: #bbb;
+}
