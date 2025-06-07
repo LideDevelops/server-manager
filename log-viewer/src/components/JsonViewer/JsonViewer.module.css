@@ -1,0 +1,4 @@
+/* Styles for the JsonViewer component */
+.jsonViewer {
+  @apply bg-gray-100 text-gray-800 p-4 rounded overflow-x-auto text-sm font-mono border border-gray-200;
+}

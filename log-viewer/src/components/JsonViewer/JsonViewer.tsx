@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './JsonViewer.module.css';
 
 export interface JsonViewerProps {
   data: unknown;
@@ -13,9 +14,7 @@ const formatJson = (data: unknown) => {
 };
 
 const JsonViewer: React.FC<JsonViewerProps> = ({ data }) => (
-  <pre className="bg-gray-100 text-gray-800 p-4 rounded overflow-x-auto text-sm font-mono border border-gray-200">
-    {formatJson(data)}
-  </pre>
+  <pre className={styles.jsonViewer}>{formatJson(data)}</pre>
 );
 
 export default JsonViewer;
