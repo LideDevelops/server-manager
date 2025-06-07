@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
-import CollapseExpandButton from '../components/CollapseExpandButton';
+import { CollapseExpandButton } from '../../components';
 
 const meta: Meta<typeof CollapseExpandButton> = {
   title: 'Components/CollapseExpandButton',

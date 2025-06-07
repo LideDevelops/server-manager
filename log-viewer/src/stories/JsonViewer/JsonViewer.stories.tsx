@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import JsonViewer from '../components/JsonViewer';
+import { JsonViewer } from '../../components';
 
 const meta: Meta<typeof JsonViewer> = {
   title: 'Components/JsonViewer',
