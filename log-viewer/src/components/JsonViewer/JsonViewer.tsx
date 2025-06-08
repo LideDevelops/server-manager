@@ -27,17 +27,30 @@ const JsonNode: React.FC<{ data: unknown, path: string; level?: number }> = ({ d
   const [expanded, setExpanded] = React.useState(false);
   if (isJsonObject(data)) {
     return (
+        <div>
+            <span onClick={() => setExpanded((e) => !e)} className={styles.toggle}>
+                {"{ "} 
+            </span>
+        {expanded && (
             <div className={styles.node}>
-                <span onClick={() => setExpanded((e) => !e)} className={styles.toggle}>
-                    {expanded ? "-" : "+"} Object
-                </span>
-                {expanded &&
-                    Object.entries(data).map(([key, value]) => (
-                        <div key={key}>
-                            <span className={styles.key}>{key}:</span> <JsonNode data={value} path={`${path}.${key}`} />
+
+                
+                  {
+                      Object.entries(data).map(([key, value]) => (
+                        <div className={styles.node}>
+                          <div key={key}>
+                              <span className={styles.key}>{key}:</span> <JsonNode data={value} path={`${path}.${key}`} />
+                          </div>
                         </div>
-                    ))}
+                      ))}
+
             </div>
+        )}
+            <span onClick={() => setExpanded((e) => !e)} className={styles.toggle}>
+                {"}"} 
+            </span>
+          </div>
+
         );
   } else if (isJsonArray(data)) {
     return (
